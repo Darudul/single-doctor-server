@@ -38,21 +38,21 @@ async function run() {
       const result = await serviceCollection.insertOne(newUser);
       res.send(result);
     });
-    app.delete('/service/:id', async(req, res) =>{
+    app.delete("/service/:id", async (req, res) => {
       const id = req.params.id;
-      const query = {_id: ObjectId(id)};
+      const query = { _id: ObjectId(id) };
       const result = await serviceCollection.deleteOne(query);
       res.send(result);
-  });
+    });
   } finally {
   }
 }
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("This is important for check!");
+  res.send("amar heroku push hocce nh");
 });
 
 app.listen(port, () => {
-  console.log("today using genious car servi", port);
+  console.log("ki kori pai nh vebe ki j kori", port);
 });
